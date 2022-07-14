@@ -7,5 +7,7 @@ const routes = Router();
 routes.get('/contacs', ContactController.index);
 routes.get('/contacs/:id', ContactController.show);
 routes.delete('/contacs/:id', ContactController.delete);
+routes.post('/contacs', ContactController.store);
+routes.put('/contacs/:id', ContactController.update);
 
 module.exports = routes;
