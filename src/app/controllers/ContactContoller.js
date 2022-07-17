@@ -16,7 +16,7 @@ class ContactContoller {
     const contact = await ContactsRepository.findById(id);
 
     if (!contact) {
-      return response.status(404).json({ error: 'User not found' });
+      return response.status(404).json({ error: 'Contact not found' });
     }
 
     response.json(contact);
@@ -55,7 +55,7 @@ class ContactContoller {
     const contactExists = await ContactsRepository.findById(id);
 
     if (!contactExists) {
-      return response.status(404).json({ error: 'User not found' });
+      return response.status(404).json({ error: 'Contact not found' });
     }
 
     if (!name) {

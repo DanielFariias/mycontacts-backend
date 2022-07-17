@@ -5,11 +5,11 @@ const ContactController = require('./app/controllers/ContactContoller');
 
 const routes = Router();
 
-routes.get('/contacs', ContactController.index);
-routes.post('/contacs', ContactController.store);
-routes.get('/contacs/:id', ContactController.show);
-routes.put('/contacs/:id', ContactController.update);
-routes.delete('/contacs/:id', ContactController.delete);
+routes.get('/contacts', ContactController.index);
+routes.post('/contacts', ContactController.store);
+routes.get('/contacts/:id', ContactController.show);
+routes.put('/contacts/:id', ContactController.update);
+routes.delete('/contacts/:id', ContactController.delete);
 
 routes.get('/categories', CategoryController.index);
 routes.post('/categories', CategoryController.store);
