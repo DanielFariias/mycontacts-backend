@@ -1,6 +1,7 @@
 const ContactsRepository = require('../repositories/ContactsRepository');
 
 class ContactContoller {
+  // Index = Listar todos os registros
   async index(request, response) {
     // Listar todos os registros
     const { orderBy } = request.query;
@@ -9,6 +10,7 @@ class ContactContoller {
     response.json(contacts);
   }
 
+  // Show = Obter um unico registro
   async show(request, response) {
     // Obter um registro
     const { id } = request.params;
@@ -22,6 +24,7 @@ class ContactContoller {
     response.json(contact);
   }
 
+  // Store = Criar um novo registro
   async store(request, response) {
     // Criar um novo registro
     const {
@@ -45,6 +48,7 @@ class ContactContoller {
     response.json(contact);
   }
 
+  // Update = Editar um  registro
   async update(request, response) {
     // Editar um registro
     const { id } = request.params;
@@ -75,6 +79,7 @@ class ContactContoller {
     response.json(contact);
   }
 
+  // Delete = Remover um  registro
   async delete(request, response) {
     // Deletar um registro
     const { id } = request.params;
@@ -85,4 +90,5 @@ class ContactContoller {
   }
 }
 
+// Pattern Singleton - Unica instancia de uma classe;
 module.exports = new ContactContoller();

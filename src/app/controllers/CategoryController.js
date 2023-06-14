@@ -53,7 +53,6 @@ class CategoryController {
   }
 
   async delete(request, response) {
-    // Deletar um registro
     const { id } = request.params;
 
     await CategoriesRepository.delete(id);
